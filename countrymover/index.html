@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+    <title>Country Mover</title>
+    <link rel="icon" href="../dmIcon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-102288737-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    
+    <style>
+    
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .modal-content{
+        background-color: #03A9F4;
+        color: white;
+      }
+
+
+    </style>
+    
+  </head>
+  <body>
+    <div id="map">
+    </div>
+    
+    <div class="modal fade" id="howTo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">How To</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>- Click or tap on a country to make it draggable.<br>
+               - Double click to unselect it.<br>
+               - That's about it!
+            </p>
+            <p>If you mess up the whole world then reload the page to put it right again.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script>
+      
+
+      var map;
+      function initMap() {
+        
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: {lat: 38, lng: 0},
+          
+          //added as using double click to unselect polygons
+          disableDoubleClickZoom: true
+        });
+        
+        map.data.loadGeoJson('countries110m.json')
+        console.log(map.data)
+        
+        map.data.setStyle({
+          strokeWeight: 1,
+          geodesic: true
+        });
+        
+        map.data.setStyle(function(feature) {
+          var color = 'grey';
+          var allowDrag = false;
+          if (feature.getProperty('selected')) {
+            color = 'red';
+            allowDrag = true;
+          }
+          
+          return ({
+            fillColor: color,
+            strokeColor: color,
+            strokeWeight: 2,
+            draggable: allowDrag,
+            geodesic: true
+          });
+        });
+        
+        //click to select a country, double click to unselect.
+        map.data.addListener('click', function(event) {
+          console.log('click happened')
+          event.feature.setProperty('selected', true);
+        });
+        
+        map.data.addListener('dblclick', function(event) {
+          console.log('dbclick happened')
+          event.feature.setProperty('selected', false);
+        });
+        
+        //increase outline on hover and remove after hover
+        map.data.addListener('mouseover', function(event) {
+          map.data.revertStyle();
+          map.data.overrideStyle(event.feature, {strokeWeight: 6});
+        });
+        
+        map.data.addListener('mouseout', function(event) {
+          map.data.revertStyle();
+        });
+       
+        //show pop up about how to select and unselect countries when map loaded
+        google.maps.event.addListenerOnce(map, 'idle', function() {
+          console.log('in idle listener')
+          $("#howTo").modal('show');
+        });
+        
+        
+        
+      };
+      
+     
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtGi5gj16Kb-cKYACYlcNYLHJSXyKEmwk&callback=initMap">
+
+    </script>
+  </body>
+</html>

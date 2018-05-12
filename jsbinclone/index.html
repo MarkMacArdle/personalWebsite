@@ -1,0 +1,206 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DarraghBin</title>
+        <link rel="icon" href="../dmIcon.png">
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-102288737-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+        
+        <style type="text/css">
+            
+            body {
+                margin: 0;
+                font-family: helvetica, sans-serif;
+            }
+            
+            #headerDiv {
+                height: 50px;
+                background-color: #EEEEEE;
+                border-bottom: 1px #BFBFBF solid;
+            }
+            
+            #logo {
+                float: left;
+                font-weight: bold;
+                font-size: 180%;
+                padding: 9px 9px 0px 10px;
+                width: 200px;
+            }
+            
+            .areaButton {
+                float: left;
+                padding: 6px 9px;
+            }
+            
+            .areaButton:hover {
+                background-color: grey !important;
+            }
+            
+            .activeButton {
+                background-color: #EBF4FF;
+            }
+            
+            .notEndButton {
+                border-right: 1px grey solid;
+            }
+            
+            #areaButtonDiv {
+                font-size: 90%;
+                border: 1px grey solid;
+                border-radius: 5px;
+                overflow: hidden;
+                width: 255px;
+                margin: 0 auto;
+                position: relative;
+                top: 11px;
+                left: -105px; /*DM: move back by half width of logo*/
+            }
+            
+            .workAreaContainer {
+                resize: none;
+                background-color: #F7F7F7;
+                margin: 0;
+                display: none;
+                border: none;
+                border-right: 1px grey solid;
+                float: left;
+            }
+            
+            .textArea {
+                resize: none;
+                background-color: #F7F7F7;
+                margin: 0;
+                padding: 0;
+                border: none;
+                float: left;
+                height: 100%;
+                width: 100%;
+            }
+            
+            .activeArea {
+                display: block !important;
+            }
+            
+            .ui-wrapper { 
+                /*DM: using resizable seems to puts the element in a div with this class name that has padding. */
+                padding: 0px !important;
+            }
+            
+            .ui-resizable-se { 
+                /*DM: from stackoverflow to get rid of little handle in bottom left corner*/
+                background-image: url("");
+            }
+            
+            .areaHeading {
+                font-weight: bold;
+                color: #8CD9FA;
+                height: 11px;
+                padding: 10px 0px;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        <div id="headerDiv">
+            <div id="logo">DarraghBin</div>
+            
+            <div id="areaButtonDiv">
+                <div id="htmlButton" class="areaButton notEndButton activeButton">HTML</div>
+                <div id="cssButton" class="areaButton notEndButton activeButton">CSS</div>
+                <div id="jsButton" class="areaButton notEndButton activeButton">JavaScript</div>
+                <div id="outputButton" class="areaButton activeButton">Output</div>
+            </div>
+        </div>
+        
+        <div id="workingAreaDiv">
+            <div id="htmlAreaContainer" class="workAreaContainer activeArea">
+                <div class="areaHeading">HTML</div>
+                <textarea id="htmlArea" class="textArea"><p id="start">Hello from Darragh!</p></textarea>
+            </div>
+            
+            <div id="cssAreaContainer" class="workAreaContainer activeArea">
+                <div class="areaHeading">CSS</div>
+                <textarea id="cssArea" class="textArea">p{color: red;}</textarea>
+            </div>
+            
+            <div id="jsAreaContainer" class="workAreaContainer activeArea">
+                <div class="areaHeading">JavaScript</div>
+                <textarea id="jsArea" class="textArea">document.getElementById("start").style.color = "green"; </textarea>
+            </div>
+            
+            <div id="outputAreaContainer" class="workAreaContainer activeArea">
+                <div class="areaHeading">Output</div>
+                <iframe id="outputArea" class="textArea"></iframe>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            
+            function activeWindows(){
+                var activeWindowsCount = $(".activeArea").length;
+                return activeWindowsCount;
+            }
+            
+            function updateWidths(){
+                $(".workAreaContainer").width(($(window).width()-10) / activeWindows());
+            }
+            
+            function updateHeights() {
+            $(".textArea").height($(window).height() - 170); /*DM: 170 found by trial and error to stop having to scroll down.*/
+            }
+            
+            function updateIframe() {
+                var code = "<html><head><style type='text/css'>" + $("#cssArea").val() + "</style></head><body>" + $("#htmlArea").val() + "</body></html>";
+                $("iframe").contents().find("html").html(code);
+                document.getElementById("outputArea").contentWindow.eval($("#jsArea").val());
+            }
+            
+            $(".areaButton").click(function(){
+                $(this).toggleClass("activeButton");
+                
+                if($(this).html() == $("#htmlButton").html()){
+                    $("#htmlAreaContainer").toggleClass("activeArea");
+                } else if ($(this).html() == $("#cssButton").html()){
+                    $("#cssAreaContainer").toggleClass("activeArea");
+                } else if ($(this).html() == $("#jsButton").html()){
+                    $("#jsAreaContainer").toggleClass("activeArea");
+                } else if ($(this).html() == $("#outputButton").html()){
+                    $("#outputAreaContainer").toggleClass("activeArea");
+                }
+                
+                updateWidths();
+            });
+            
+            $(".workAreaContainer").resizable({
+                maxHeight: $(".workAreaContainer").height(),
+                minHeight: $(".workAreaContainer").height(),
+            });
+                        
+            updateWidths();
+            updateHeights();
+            updateIframe()
+            
+            $( ".textArea" ).keyup(function() {
+                updateIframe();
+            });
+            
+        </script>
+        
+        
+    </body>
+
+</html>

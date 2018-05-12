@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Darragh Mac Ardle</title>
+    <link rel="icon" href="dmIcon.png">
+    <meta name="description" content="I'm learning to code! Follow me exploring python, machine learning and web development.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-102288737-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+    <style type="text/css">
+      .navbar {
+        background-color: #000000 !important;
+      }
+      
+      #jtronContainer {
+        padding-top:30px;
+      }      
+
+      #jtron {
+        background-image: url("header550.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #ffffff;
+        height: 550px;
+      }
+
+      #jtronText {
+        padding-top: 90px;
+      }
+      
+      /*stop text wrapping behind cards on small screens.*/
+      @media (max-width: 575px) {
+        #jtronText {
+          padding-top: 50px !important;
+        }
+        
+        #jtronHeadline {
+          font-size: 60px;
+        }
+      }
+      
+      #smallCardsSection {
+        position: relative;
+        top: -80px;
+      }
+
+      .cardTopIcon {
+        width: 110px;
+        height: 110px;
+        padding-top: 30px;
+        margin-bottom: 15px;
+        box-shadow: 3px 5px 15px #888888;
+      }
+
+      #projectsCard .cardTopIcon,
+      #projectsCard .btn {
+        background-color: #03A9F4;
+        border-color: #03A9F4;
+      }
+
+      #aboutMeCard .cardTopIcon,
+      #aboutMeCard .btn {
+        background-color: #4caf50;
+        border-color: #4caf50;
+      }
+
+      #coursesCard .cardTopIcon,
+      #coursesCard .btn {
+        background-color: #fbc02d;
+        border-color: #fbc02d;
+      }
+      
+      .fa-university {
+        /*just this icon was a little bit off center for some reason */
+        position: relative;
+        left: 2px;
+      }
+
+      .card-block {
+        padding-bottom: 0;
+      }
+
+      .card-footer {
+        background-color: #ffffff;
+        border: none;
+        padding-bottom: 20px;
+      }
+
+      #smallCardsSection a, #smallCardsSection .cardTopIcon, .card-header {
+        -webkit-transition: all 0.75s ease;
+        -moz-transition: all 0.75s ease;
+        -o-transition: all 0.75s ease;
+        -ms-transition: all 0.75s ease;
+        transition: all 0.75s ease;
+      }
+
+      #smallCardsSection a:hover, #smallCardsSection .cardTopIcon:hover, .card-header:hover {
+        -webkit-filter: brightness(70%);
+        filter: brightness(70%);
+      }
+
+      .sectionCard {
+        padding: 0px 0px 0px 0px;
+        margin-bottom: 80px;
+      }
+      
+      .sectionCardContainer {
+        /* does offset so that navbar and small card links jump to right place in page */
+        padding-top: 50px;
+        margin-top: -50px;
+      }
+
+      .sectionHeading {
+        padding: 25px 0px 10px 0px;
+      }
+      
+      .sectionCardPara {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      .card-header {
+        border-radius: 4px !important;
+        border-bottom: 0;
+        border-top: 2px solid #ffffff;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      
+      .accordian {
+        border-color: #ffffff;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+      }
+      
+      .card-headerProjects {
+        background-color: #03A9F4;
+      }
+      
+      .card-headerCourses {
+        background-color: #fbc02d;
+      }
+      
+      #aboutMeSectionCard {
+        padding-bottom: 40px;
+      }
+      
+      #footer {
+        height: 60px;
+        background-color: #000000;
+        color: #ffffff;
+        border-top: 4px solid #03A9F4;
+      }
+
+      #footerText {
+        position: relative;
+        top: 14px;
+      }
+    
+    
+    </style>
+   
+  </head>
+  <body data-spy="scroll" data-target="#myNav">
+    
+    <nav id="myNav" class="navbar fixed-top navbar-toggleable navbar-inverse">
+      <div class="container text-center">
+        <button id="smNavBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span id="logoInitials">DM</span>
+        </button>
+        <div  id="collapsingNavbar" class="collapse navbar-collapse">
+          <a class="navbar-brand hidden-xs-down" href="#jtron"><span id="logoFullName">Darragh Mac Ardle</span></a>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active text-center">
+              <a class="nav-link" href="index.html#jtron">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#projectsSection">Projects</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#coursesSection">Courses</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#aboutMeSection">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="jtronContainer"> <!-- extra container needed only so I could add padding above jumbotron -->
+      <div id="jtron" class="jumbotron jumbotron-fluid text-center">
+        <div id="jtronText">
+          <h1 id="jtronHeadline" class="display-3"></h1> <!-- text added by javascript -->
+          <p id="jtronP" class="lead align-middle">Follow me exploring python, machine learning and web development</p>
+        </div>
+      </div>
+    </div>
+      
+      
+    <!-- ==== Small Cards Section ==== -->
+    <div id="smallCardsSection" class="card-group container">
+      <div id="projectsCard" class="card text-center col-md-4 mx-auto">
+        <div class="card-block">
+          <a href="#projectsSection">
+            <div class="cardTopIcon rounded-circle mx-auto">
+              <i class="fa fa-wrench fa-3x fa-inverse align-middle" aria-hidden="true"></i></span>
+            </div>
+          </a>
+          <h4 class="card-title">Projects</h4>
+          <p class="card-text">Examples of some of the projects I’ve created.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#projectsSection" class="btn btn-primary">Learn more</a>
+        </div>
+      </div>
+      
+      <div id="aboutMeCard" class="card text-center col-md-4 col-lg-4 mx-auto">
+        <div class="card-block">
+          <a href="#aboutMeSection">
+            <div class="cardTopIcon rounded-circle mx-auto">
+              <i class="fa fa-id-card fa-3x fa-inverse align-middle" aria-hidden="true"></i></span>
+            </div>
+          </a>
+          <h4 class="card-title">About Me</h4>
+          <p class="card-text">Find out more and how to contact.</p>
+
+        </div>
+        <div class="card-footer">
+          <a href="#aboutMeSection" class="btn btn-primary">Learn more</a>
+        </div>
+      </div>
+      
+      <div id="coursesCard" class="card text-center col-md-4 col-lg-4 mx-auto">
+        <div class="card-block">
+          <a href="#coursesSection">
+            <div class="cardTopIcon rounded-circle mx-auto">
+              <i class="fa fa-university fa-3x fa-inverse align-middle" aria-hidden="true"></i></span>
+            </div>
+          </a>
+          <h4 class="card-title">Courses Taken</h4>
+          <p class="card-text">Programming courses I’ve taken, what I thought of them and access to my notes.</p>
+          
+        </div>
+        <div class="card-footer">
+          <a href="#coursesSection" class="btn btn-primary">Learn more</a>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    <!--=====Projects Section=====-->
+    <div id="projectsSection" class="container sectionCardContainer">
+      <div class="card mx-auto col-lg-9 sectionCard"> <!-- had to put another inside the main container so the card has the same width as the 3 cards above -->
+        <h1 class="sectionHeading text-center">Projects</h1>
+        
+        <p class="text-center sectionCardPara">
+          Below, with the most recent first, is a list of some of the projects I've created so far. They range from the very first thing I wrote, a version of Minesweeper in Excel, to more advanced projects like my two player Snake game.
+        </p>
+        
+        <div id="projectsAccordion" role="tablist" aria-multiselectable="true">
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseTen">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseTen">
+                  Snake with High Score Database (SQL, Python)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseTen" class="collapse" role="tabpanel" aria-labelledby="headingTen">
+              <div class="card-block">
+                <p><a href="https://github.com/darraghmacardle/Snake-1_and_2_player" target="_blank">Link to GitHub</a></p>
+                <p>Added database functionality to the snake game I previously made. I'm using PostgreSQL to store two tables of high scores for the one and two player versions of the game. Winners are asked to input their first and last names inside the game window and their scores recorded.</p>
+                
+                <p>SQL functions for setting up the tables, adding scores and retrieving scores in descending order are stored in Python functions and called as needed. A decorator is used to wrap these functions in another that opens the connection to the database, commits changes and closes the connection.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseNine">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseNine">
+                  Country Mover - aka Africa is Huge (Google Maps API, Javascript)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine">
+              <div class="card-block">
+                <p><a href="http://hidarragh.com/countrymover" target="_blank">Link to page</a></p>
+                <p>Try dragging Russia down to Africa! Or Brazil on top of Europe!</p>
+                
+                <p>The popular rectangular map projection of our spherical globe makes northern hemisphere countries appear deceptively large and places like Africa deceptively small. Drag the countries around to better compare their true size.
+                </p>
+                <p>I created a suitable GeoJSON of country outlines and used the Google Maps API to make them draggable and distort correctly.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseEight">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseEight">
+                  This Website! (Bootstrap, JQuery)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
+              <div class="card-block">
+                <p>I created this website myself using the alpha 6 release of Bootstrap 4 and a little bit of JQuery to do the self typing text in the heading.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseSeven">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseSeven">
+                  Snake (Python, Pygame)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
+              <div class="card-block">
+                <p><a href="https://github.com/darraghmacardle/Snake-1_and_2_player" target="_blank">Link to GitHub</a></p> 
+                <p>A one and two player version of Snake. I made it to practice using classes in Python and used Pygame to create the user interface. I had a great time in testing. I had to get my housemates to help because, it's a little know fact that that it's way harder than you would think to play two player snake on your own! 
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseSix">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseSix">
+                  Blackjack (Python)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="card-block">
+                <p><a href="https://github.com/darraghmacardle/Blackjack" target="_blank">Link to GitHub</a></p> 
+                <p>A text based version of blackjack I created with Python. Allows multiple players and deals and does hits in correct order.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseFour">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseFour">
+                  PitchHunter.co.uk (Bootstrap)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="card-block">
+                <p><a href="pitchhunter/index.html" target="_blank">Link to page</a></p>  
+                <p>An app landing page I created for a now defunct project with a friend. We were going to create an app for booking five-a-side pitches and finding people to play with. We didn't get too far with it as it didn't look like it could meet it's costs. Got this landing page out of it though!
+                </p>
+                <p>It was the first time I used Bootstrap, framework developed by engineers from Twitter. It makes it easy to create websites that resize nicely on different screensizes, especially mobile devices.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseThree" >
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseThree">
+                  JS Bin Clone (HTML, CSS, JavaScript/JQuery)
+                </a>
+              </h5>
+            </div>
+
+            <div id="projectsCollapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="card-block">
+                <p><a href="jsbinclone/index.html" target="_blank">Link to page</a></p>
+                <p>A fun project where I used JQuery for the first time. It's a clone of <a href="https://jsbin.com" target="_blank">JS Bin</a>, and lets you type html, CSS and JavaScript in different panes on the one screen and see the output update live.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseOne">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseOne">
+                  Minesweeper Clone (Excel VBA)
+                </a>
+              </h5>
+            </div>
+
+            <div id="projectsCollapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="card-block">
+                <p><a href="https://github.com/darraghmacardle/MinesweeperExcel" target="_blank">Link to GitHub</a></p>
+                
+                <p>This was the first programming project I did! I did it when I started my job as a graduate with Jaguar Land Rover and initially wasn't very busy. I saw how useful macros in Excel were in my team so I started learning how to program them and this became my pet project.
+                </p>
+                <p>As it's in Excel this is written in VBA (Visual Basic for Applications). It may not be the sexiest language in the world, but when you work for a large corporation that restricts what programs you can use it's a godsend. The programming includes if statments, for loops and functions.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <!--=====Courses Section=====-->
+    <div id="coursesSection" class="container sectionCardContainer">
+      <div class="card mx-auto col-lg-9 sectionCard"> <!-- had to put another inside the main container so the card has the same width as the 3 cards above -->
+        <h1 class="sectionHeading text-center">Courses</h1>
+        
+        <p class="text-center sectionCardPara">
+          Below, again with the most recent first, is a list of the courses I've used so far and my experience with them. I take a lot of notes so I’ve included links to these in case they may be of use to your learning too. Be warned though that I wrote them for myself and wasn’t thinking of others using them at the time!
+        </p>
+        
+        <div id="coursesAccordion" role="tablist" aria-multiselectable="true">
+        
+          
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseSix">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseSix">
+                  SQL Bootcamp
+                </a>
+              </h5>
+            </div>
+
+            <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="card-block">
+                <p><a href="https://www.udemy.com/the-complete-sql-bootcamp/learn/v4/overview" target="_blank">Course link</a></p>                
+                <p><a href="https://docs.google.com/document/d/1nszVawYPBCso-cxQQnzo_hjSkJtpkSX1L2edMp8xGDI/edit?usp=sharing" target="_blank">My notes link</a></p>
+                
+                <p>Course used SQL in PostGres with pgAdmin and was provided on Udemy. It started with basic queries of a database to select and view columns before moving on to more advanced with conditional queries and topics like joining or self-joining tables. It also covered setting up new databases and creating and modifying tables. I feel like it ended a little too soon as the creating tables section seemed to leave out how to use foreign keys in different tables. 
+                
+                Overall though it was an enjoyable and clear course. It was thought by the same tutor as the "Python Bootcamp" course I'd previously done, which I also enjoyed.
+                </p>
+                <h5>Projects</h5>
+                <p>The assessments and challenges were on querying databases of a DVD rental store social club. Both had multiple tables that you sometimes had to join to properly query. In the final section you had to create your own database with teacher and student tables, define the data types and insert rows of information.
+                
+                While the activities were frequent through the course they were all quite brief. This is a common criticism I have of Udemy courses as it's hard to know much you can do on your own without challenges that need significant amount of independent work.
+                </p>
+                <br>
+                <h5>Time Taken</h5>
+                <p>This was likely the shortest course I've done. It had 8.5 hours of video but only took 15 hours for me to get through, which is largely due to the short activities. 
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        
+        
+        
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseFive">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseFive">
+                  Machine Learning
+                </a>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+              <div class="card-block">
+                <p><a href="http://www.coursera.org/learn/machine-learning" target="_blank">Course link</a></p>                
+                <p><a href="https://docs.google.com/document/d/1F3Ohs3deZv_Wi-qwrO3PK7c0Bfwz2lLPN7fn084ek8s/edit?usp=sharing" target="_blank">My notes link</a></p>
+                
+                <p>This was the first course I’ve done on Coursera. It was created by Stanford University which is famous for computer science and for a huge amount of its students going on to work at the major tech companies. The lecturer is Andrew Ng who himself is a famous for advances his teams have made in machine learning. This course is a shortened version of what they teach on campus (which is 
+                <a href="https://itunes.apple.com/gb/course/machine-learning/id495053006" target="_blank">available for free</a>
+                too). Also if you google or search on Quora for how to learn machine learning you’ll very likely see this recommended.
+                </p>
+                <p>With all that credibility and popularity I had pretty high expectations. I did really enjoy this course and found it fascinating, but the thing that no one seemed to bother mentioning on Quora is that it’s mainly about <i>the theory</i> of machine learning, rather than applying it. This means enough mathematical notation to suffocate a tall elephant and any programming is done in Matlab (or the free equivalent Octave). There’s an optional brush up section at the start on linear algebra that I recommend because matrices and their multiplication feature heavily.
+                </p>
+                <p>The course content is almost the opposite of the Data Science course I did previously on Udemy. That was all about how to apply it and showing the code you’d use in Python, this was about how the algorithms behind it all worked. If this was the first thing I tried to do in machine learning I probably would have run away, but after the other course this was actually really interesting to see how it all worked.
+                </p>
+                <h5>Projects</h5>
+                <p>It has 8 projects that took me 4 to 5 hours to complete each week. They’re in Matlab and involve finishing functions to get a program they’ve written to work. While they were good for increasing my understanding of the material, it suffers a similar problem to the Data Science course. Now that I’ve finished it I’m not much better at applying machine learning independently, despite understanding it better. Like the Data Science course to make the most of it you’ll have to independently find some project to work on to apply your learning. I found 
+                <a href="https://www.kaggle.com/" target="_blank">Kaggle’s</a> initial challenges like the Titanic data set great for this.
+                </p>
+                <br>
+                <h5>Time Taken</h5>
+                <p>I’m not sure how many hours of video lectures there are but it took me 82 hours over 10 weeks overall to complete. Unlike the Udemy courses this is broken down to have a weekly structure with one assignment and a multiple choice test or two to complete each week. You’ll get reminders to complete the assignments on time. There’s actually no penalty for submitting late but I found the structure helpful anyway as it encouraged me to stay on track.
+                </p>
+
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseFour">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseFour">
+                  Complete Python Bootcamp
+                </a>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="card-block">
+                <p><a href="https://www.udemy.com/complete-python-bootcamp/learn/v4/overview" target="_blank">Course link</a></p>                
+                <p><a href="https://docs.google.com/document/d/1C93VJL2JZYTbs0kC2eaulRidGqb3fjm3vQ5hMpT7CGc/edit?usp=sharing" target="_blank">My notes link</a></p>
+                
+                <p>I did this course on Udemy and it is my favourite so far. I feel like I’ve gained a really good (or at least vastly improved) understanding of Python and was able to apply it by creating a two player version of Snake (check it out 
+                <a href="https://github.com/darraghmacardle/Snake-1_and_2_player" target="_blank">on my GitHub</a>
+                ). It covered data structures and object orientated programming. The data structures content, like working with lists and strings, is exactly what you need to know for code challenges and HackerRank questions. I don’t really have anything negative to say about it.
+                </p>
+                <h5>Projects</h5>
+                <p>There's three milestone projects as you work through the course. A text based tic-tac-toe game after you've learnt about logic and loops. A text based blackjack game after learning about functions and classes and then after some more work you're directed to choose your own project that will take about a week. He does give some ideas to help with choosing. I chose to do a 
+                <a href="https://github.com/darraghmacardle/Snake-1_and_2_player" target="_blank">two player version of Snake</a>
+                as I wanted to practice using classes more.
+                </p>
+                <br>
+                <h5>Time Taken</h5>
+                <p>The course has around 12 hours of videos and it took me 84 hours over 9 weeks to complete. I’d say I spent half of that time or more on the projects.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseThree">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseThree">
+                  Data Science and Machine Learning with Python
+                </a>
+              </h5>
+            </div>
+
+            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="card-block">
+                <p><a href="http://www.udemy.com/data-science-and-machine-learning-with-python-hands-on" target="_blank">Course link</a></p>                
+                <p><a href="https://docs.google.com/document/d/1cdj3YOASgqRs2kC7Vi1X0vjatWQXIUB8bSFUcaOG1BA/edit?usp=sharing" target="_blank">My notes link</a></p>
+                
+                <p>I found this course really interesting and got through it pretty quickly. It goes through and demonstrates the most common machine learning techniques using Python in Enthought Canopy. The lecturer, Frank Kane, has interesting experience having worked for IMDB and is engaging to listen to. His explanations of how the different algorithms work are clear and concise and he doesn’t get bogged down in the maths behind it all. The format of the lectures is typically a few slides on how an algorithm works and then talking through an IPython notebook where he'll demo what each part of the code does.
+                </p>
+                <h5>Projects</h5>
+                <p>Maybe his lack of teaching experience shows here as I felt the assignments were the weak part of this course. There are frequent "activities," but there are mainly change the variables in code he has written and see the effect on the result. This doesn't give you great experience as a writing the code the get to the stage where you apply the algorithm is actually a pretty big part of it. Possibly if I'd been better at Python at the time I wouldn't have considered it such an issue.
+
+                That doesn't mean the course was a waste, just that to make the most of it you’ll just need to find some projects that will let you practice independently applying your learning. I found 
+                <a href="https://www.kaggle.com/" target="_blank">Kaggle’s</a> initial challenges like the Titanic data set great for this.
+                </p>
+                <br>
+                <h5>Time Taken</h5>
+                <p>It’s a fairly short course with about about 9 hours of video content and with the lack of independent work to do means you can get though it quickly. It took me 41 hours over 9 weeks to complete. I did spend a good few of those hours trying to unsuccessfully create that recommender engine though!
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseTwo">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseTwo">
+                  The Complete Web Developer Course 2.0
+                </a>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="card-block">
+                <p><a href="http://www.udemy.com/the-complete-web-developer-course-2" target="_blank">Course link</a></p>                
+                <p><a href="https://docs.google.com/document/d/1eWtqTLyjeaDrzIUYnlDxl_LS9LBz7-vWOyCr54hve8c/edit?usp=sharing" target="_blank">My notes link</a></p>
+                
+                <p>This was the first course I did and it’s also the only one I haven’t actually finished it (I’m at 75%!). It’s one of the most popular courses on Udemy and definitely covers a lot of material for full stack web development. It does what it says on the tin and covers html, CSS, JavaScript, JQuery, Bootstrap, and to what I felt was a less thorough extent, PHP and MySQL. There's also a Python bit that I haven't got to yet. It’s from Rob Percival who has some of the most popular courses on Udemy. It’s well structured with a lot of assignments to implement your learning by creating your own web pages. 
+                </p>
+                One criticism I have of this course is that I feel a bit of detail on data structures of different languages is passed over. For example in the JavaScript section arrays are introduced as a way to store a list of values, but the fact there are other ways to store values or that they have different performance when being searched isn't.
+                </p>
+                <h5>Projects</h5>
+                <p>Despite skipping over a some of the detail the projects you do are impressive. For example see some of web pages I made in the Projects section, like the JSbin clone. The focus on projects is definitely a highlight of the course and gives a real sense of accomplishment. Every section has a project at the end to create a web page with what you've learned. Also during the videos he continuously prompts you to pause and try what he's been demonstrating. You could do this anyway but his persistence helps stop lasyness getting the better of you. 
+                </p>
+                <br>
+                <h5>Time Taken</h5>
+                <p>When I was doing this course I hadn't started recording the amount of hours I was spending on programming so I don’t have an exact figure for what it took me. It's a long course with about 30 hours of video content. Relating that to the Python course I did, in which I think I spent a similar proportion of time on projects, and I’d say I’ve spent about 150 hours on it.
+                </p>
+
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseOne">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseOne">
+                  Course Providers - Udemy and Coursera
+                </a>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="card-block">
+                <p>
+                <a href="https://www.udemy.com" target="_blank">Udemy.com</a> and <a href="https://www.coursera.org" target="_blank">Coursera.org</a> are the two websites I’ve used so far for my courses. I’ve found both good but there are some differences between them. On Udemy the courses are normally by professionals who have good industry experience but they may not have taught before. For example the data science with Python course I did had good content and was very focused on what’s asked for in job ads. But it didn’t have many projects you had to do independently so I struggled to apply what I’d learnt afterwards.
+                </p>
+                <p>On Coursera the courses are from universities and delivered by lecturers so they have great teaching experience but are more academic. The machine learning course also had good content but also had programming assignments each week that took me around 4-5 hours to do and definitely increased my understanding of the material. The downside was the material was quite theoretical and those assignments were in Matlab, a language popular in academia but not industry.
+                </p>
+                <p>This is just my experience from only a few courses though!
+                </p>
+                <br>
+                
+                <h5>Costs</h5>
+                <p>On the costs; Udemy courses are advertised for around £200, but they have near-perpetual sales so I haven’t paid more than £15. They’ll always say the sale is just about to end but it’ll be back on sale in a few days so don’t fell rushed into purchases. A tip I've found is to download the Udemy app before you buy a course. On more than one occasion when on a computer the Udemy website will advertise a course to me for £15, but when I check the same course on the app it will be £10. Now I purchase my courses using the app and do them on my laptop.
+                </p>
+                <p>On Coursera each university on it has a selection of courses. I found there’s normally a few entry level courses for free (like the machine learning course I did below) and then they charge for the advanced material. I find they fees that can be charged confusing and changeable. Currently (July 2017) it is £37 a month for a subscription that allows access to all paid courses on the site. Previously they charged for each course separately.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    <!--=====About Me Section=====-->
+    <div id="aboutMeSection" class="container sectionCardContainer">
+      <div id="aboutMeSectionCard" class="card mx-auto col-lg-9 sectionCard"> <!-- had to put another inside the main container so the card has the same width as the 3 cards above -->
+        <h1 class="sectionHeading text-center">About Me</h1>
+        
+        <p class="text-center sectionCardPara">
+          I‘m currently a manufacturing engineer but started programming by creating macros in Excel. I became passionate about this part of my work and since 2016 have done courses and projects in Python, web development and machine learning. I‘ve created this website to show off some of this work and discuss the courses I’ve taken. For more info on me or a contact, please use my LinkedIn below.
+        </p>
+        
+        <!--linkedin badge (also uses a javascript link at end of this doc-->
+        <div class="LI-profile-badge row justify-content-center"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="darraghmacardle"><a class="LI-simple-link" href='https://uk.linkedin.com/in/darraghmacardle?trk=profile-badge'>Darragh Mac Ardle</a></div>
+        
+      </div>
+    </div>
+    
+    
+    <!--=====Footer=======-->
+    <div id="footer">
+      <p id="footerText" class="text-center align-self-center">&copy; Darragh Mac Ardle 2017</p>
+    </div>
+    
+
+      
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <!-- for linkedin badge-->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    
+    <script type="text/javascript">
+      
+      var head1 = "Hey!".split('');
+      var head2 = "I'm learning to code".split('');
+      var head2 = "I'm learning some new things".split('');
+      var headDummy = head1.concat(("<br>"), head2);
+      var hDLen = headDummy.length;
+      var count = 0;
+      var delayKeystroke = 180;
+      var delayFade = 1000;
+      var delayRepeat = 4000;
+      
+      function typer(textToAdd){
+        if (count < hDLen) {
+          setTimeout(function() {
+            $("#jtronHeadline").append(headDummy[count]);
+            count++;
+            typer(textToAdd);
+            
+          }, delayKeystroke);
+        } else {
+          //show subheading when text has finished typing          
+          setTimeout(function() {
+            $("#jtronP").fadeIn(delayFade);
+            
+            //wait and then start the process again
+            setTimeout(function() {
+              $("#jtronHeadline").fadeOut(delayFade);
+              $("#jtronP").fadeOut(delayFade);
+              
+              setTimeout(function() {
+                $("#jtronHeadline").text('');
+                $("#jtronHeadline").show();
+                count = 0;
+                typer(headDummy);
+              }, delayFade + 200); //the extra 200 is buffer to make sure the fadeOut has finished.
+            }, delayRepeat);
+              
+          }, delayKeystroke);
+        };
+      };
+      
+      
+      $("#jtronP").hide();
+      $(document).ready(function(){
+        typer(headDummy);
+      });
+      
+    
+    </script>
+    
+    
+  </body>
+</html>
