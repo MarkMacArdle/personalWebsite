@@ -169,7 +169,11 @@
         position: relative;
         top: 14px;
       }
-    
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     
     </style>
    
@@ -275,6 +279,31 @@
         <div id="projectsAccordion" role="tablist" aria-multiselectable="true">
           
           <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseEleven">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="true" aria-controls="projectsCollapseEleven">
+                  Exploration of Red Wine Data Set (R)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseEleven" class="collapse show" role="tabpanel" aria-labelledby="headingEleven">
+              <div class="card-block">
+                <p class="text-center"><img src="redwine_eda/snipOfTwoPlots.PNG"></p>
+                <br>
+                <p><a href="redwine_eda/index.html" target="_blank">Link to project</a> (the nicest plots are at the end!)</p>
+                <p><a href="https://github.com/MarkMacArdle/redwineexploration" target="_blank">Link to GitHub</a></p>
+                <p>
+                    Exploratory data analysis (EDA) of red wine data set with R for the EDA section of the Data Analyst Nanodegree on Udacity. This was my first time using R and the course that built up to this project is available for free <a href="https://eu.udacity.com/course/data-analysis-with-r--ud651" target="_blank">here</a>. It goes through how to use R and R studio as well as what EDA is. The only difference between the free course and Nanodegree version is that you won't be assigned this project at the end. The source data is available on my GitHub if you want to do the project too though.
+                </p>
+                <p>
+                    It follows the structure of univariate, bivariate and multivariate analysis with a summary of findings or points or interest at the end of each section. There's then a final plots and conclusion section with 3 of the plots from the analysis polished up to look more presentable. I really liked the project and having something so visual to show at the end of it is great!
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseTen">
               <h5 class="mb-0">
                 <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseTen">
@@ -303,8 +332,10 @@
             </div>
             <div id="projectsCollapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine">
               <div class="card-block">
-                <p><a href="/countrymover" target="_blank">Link to page</a></p>
-                <p>Try dragging Russia down to Africa! Or Brazil on top of Europe!</p>
+                <p><a href="countrymover/index.html" target="_blank">Link to page</a></p>
+                <p>
+                    Try dragging Russia down to Africa! Or Brazil on top of Europe!
+                </p>
                 
                 <p>The popular rectangular map projection of our spherical globe makes northern hemisphere countries appear deceptively large and places like Africa deceptively small. Drag the countries around to better compare their true size.
                 </p>
