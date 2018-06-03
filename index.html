@@ -279,14 +279,70 @@
         <div id="projectsAccordion" role="tablist" aria-multiselectable="true">
           
           <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseThirteen">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="true" aria-controls="projectsCollapseThirteen">
+                  UK Vs China Air Pollution (Tableau)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseThirteen" class="collapse show" role="tabpanel" aria-labelledby="headingThirteen">
+              <div class="card-body">
+                <p class="text-center">
+                    <a href="https://public.tableau.com/profile/mark.macardle#!/vizhome/UKvChinaAirPollution_final/Story1" target="_blank">
+                        <img src="uk_china_pollution/story_screenshot.PNG">
+                    </a>
+                </p>
+                <br>
+                <p><a href="https://public.tableau.com/profile/mark.macardle#!/vizhome/UKvChinaAirPollution_final/Story1" target="_blank">Link to project</a></p>
+                <p>
+                    I used <a href="http://www.who.int/airpollution/data/cities/en/" target="_blank">data</a> from the World Health Organisation to compare if UK air pollution was still better than China's. It may seem obvious that the UK's would be better but I had been reading in the news that the UK government has <a href="https://www.theguardian.com/environment/2018/feb/21/high-court-rules-uk-air-pollution-plans-unlawful" target="_blank">lost three court cases</a> over how bad it's air pollution plans are. Meanwhile China has been <a href="https://www.bloomberg.com/news/articles/2018-01-11/china-is-winning-its-war-on-air-pollution-at-least-in-beijing" target="_blank">receiving praise</a> for the improvements it's been making so I wanted to check if the UK was still ahead. Unfortunately data was only available between 2013 to '16 but it was still possible to create an interesting story.
+                </p>
+                <p>
+                    This was the project for the data visualisation section of the Data Analyst Nanodegree on Udacity. They had some simpler data to do the project on but I was curious about this issue so opted to source my own data.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseTwelve">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseTwelve">
+                  Data Wrangling WeRateDogs Twitter (Python, Pandas)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapseTwelve" class="collapse" role="tabpanel" aria-labelledby="headingTwelve">
+              <div class="card-body">
+                <p>Link to summary of the <a href="data_wrangling_weratedogs/summary_report.html" target="_blank">data gathering, assessing and cleaning steps</a>, 
+                    <a href="data_wrangling_weratedogs/jupyter_analysis_only.html" target="_blank">brief analysis done at the end</a> and 
+                    <a href="data_wrangling_weratedogs/jupyter_full.html" target="_blank">the full jupyter notebook</a>
+                </p>
+                <p>
+                    The project was to gather, assess, clean and then briefly analyse data from the <a href="https://twitter.com/dog_rates/" target="_blank">WeRateDogs</a> twitter profile. They give cute dogs enthusiastic ratings (like 12/10 or 13/10) and are responsible for the <a href="http://knowyourmeme.com/memes/theyre-good-dogs-brent" target="_blank">"They're good dogs Brent"</a> meme. This was for the data wrangling section the Udacity Data Analyst Nanodegree I did. Some data about the tweets was given in csv files and some I had to pull using the twitter api and the tweepy library.
+                </p>
+                <p>
+                    I gained a lot of practical experience using the Pandas library and manipulating data frames. However, I think my favourite part was using regular expressions to pull the ratings from each tweet. I knew about them before but never really understood or used them, so this was great practice. I found <a href="https://regexone.com/" target="_blank">regexone.com</a> really helpful when learning more.
+                </p>
+                <p>
+                    There was a short analysis section at the end. This was largely to demonstrate that the cleaned data was useable so is quite brief as it wasn't the main focus of the project.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseEleven">
               <h5 class="mb-0">
-                <a class="collapsed" aria-expanded="true" aria-controls="projectsCollapseEleven">
+                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseEleven">
                   Exploration of Red Wine Data Set (R)
                 </a>
               </h5>
             </div>
-            <div id="projectsCollapseEleven" class="collapse show" role="tabpanel" aria-labelledby="headingEleven">
+            <div id="projectsCollapseEleven" class="collapse" role="tabpanel" aria-labelledby="headingEleven">
               <div class="card-body">
                 <p class="text-center">
                     <a href="redwine_eda/index.html" target="_blank">
@@ -362,7 +418,7 @@
             </div>
             <div id="projectsCollapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
               <div class="card-body">
-                <p>I created this website myself using the alpha 6 release of Bootstrap 4 and a little bit of JQuery to do the self typing text in the heading.
+                <p>I created this website using the alpha 6 release of Bootstrap 4 and a little bit of JQuery to do the self typing text in the heading.
                 </p>
               </div>
             </div>
@@ -491,7 +547,7 @@
             <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseSeven">
               <h5 class="mb-0">
                 <a class="collapsed" aria-expanded="false" aria-controls="collapseSeven">
-                  Data Analyst Nanodegree (Currently doing)
+                  Data Analyst Nanodegree
                 </a>
               </h5>
             </div>
@@ -501,27 +557,29 @@
                 <p><a href="https://eu.udacity.com/course/data-analyst-nanodegree--nd002" target="_blank">Course link</a></p>                
                 <p>My notes on: 
                     <a href="https://docs.google.com/document/d/1kM96qtHXnoqg0vVI1jt1cuYnsxePQx47T-eZOAuPWhg/edit?usp=sharing" target="_blank">R</a>, 
-                    <a href="https://docs.google.com/document/d/1Tkj_5yppIXp9RXBJs2d1b9aNPUu2L7oVOZtSWJ4vCjk/edit?usp=sharing" target="_blank">data wrangling with Python</a>
+                    <a href="https://docs.google.com/document/d/1Tkj_5yppIXp9RXBJs2d1b9aNPUu2L7oVOZtSWJ4vCjk/edit?usp=sharing" target="_blank">data wrangling with Python</a>,
+                    <a href="https://docs.google.com/document/d/1jUKlYQrcUItsLuYnd-Mgb8cs6UOTNmvL1kta93YK9t0/edit?usp=sharing" target="_blank">data visualisation with Tableau</a>
                 </p>
                 
-                <p>I am doing term 2 of this course on Udacity which has three sections:
+                <p>I did term 2 of this course on Udacity which had three sections:
                     <ol>
                       <li>Exploratory data analysis with R (<a href="https://eu.udacity.com/course/data-analysis-with-r--ud651" target="_blank">course available free here</a>)</li>
                       <li>Data wrangling with Python and the Pandas library</li>
                       <li>Data visualisation with Tableau (<a href="https://eu.udacity.com/course/data-visualization-in-tableau--ud1006" target="_blank">course available free here</a>)</li>
                     </ol>
-                    It's the first course I've done on Udacity and I'm quite pleased with it so far. It's delivered mainly through numerous short video lectures which are typically only 2-3 minutes long and normally have an exercise to during it or at the end. It was a lot more expensive than courses I've done before costing £579. A lot of the content is available free, as linked above. The advantage of the paid version is at the end of each section has a relatively large project to do that gets graded. As well as the benefit of doing a project yourself this also means you have something to show off your work with.
+                    It was the first course I did on Udacity and I was very impressed with it. It's delivered mainly through numerous short video lectures which are typically only 2-3 minutes long and normally have an exercise to do during or at the end of each video. It was a lot more expensive than courses I've done before at £579. A lot of the content is available free, as linked above. The advantage of the paid version is at the end of each section has a relatively large project to do that gets graded. As well as the benefit of doing a project yourself this also means you have something to show off your work with.
                 </p>
                 <p>
-                    During this course I've found I needed to brush on a lot of things so have also done additional smaller courses on <a href="https://eu.udacity.com/course/how-to-use-git-and-github--ud775" target="_blank">using Git for version control</a> (which I now use for the files of this website), <a href="https://eu.udacity.com/course/linux-command-line-basics--ud595" target="_blank">Linux command line basics</a> to help with using Git, intros to <a href="https://eu.udacity.com/course/intro-to-descriptive-statistics--ud827" target="_blank">descriptive</a> and <a href="https://eu.udacity.com/course/intro-to-inferential-statistics--ud201" target="_blank">inferential</a> statistics (which I flicked through to refamiliarise myself on statistics terms), and an intro to the Python <a href="https://eu.udacity.com/course/intro-to-data-analysis--ud170" target="_blank">Pandas library</a> which I'd used before but never fully understood. 
+                    During this course I've found I needed to brush up on a lot of things so have also done additional smaller courses on <a href="https://eu.udacity.com/course/how-to-use-git-and-github--ud775" target="_blank">using Git for version control</a> (which I now use for the files of this website), <a href="https://eu.udacity.com/course/linux-command-line-basics--ud595" target="_blank">Linux command line basics</a> to help with using Git, intros to <a href="https://eu.udacity.com/course/intro-to-descriptive-statistics--ud827" target="_blank">descriptive</a> and <a href="https://eu.udacity.com/course/intro-to-inferential-statistics--ud201" target="_blank">inferential</a> statistics (which I flicked through to refamiliarise myself on statistics terms), and an intro to the Python <a href="https://eu.udacity.com/course/intro-to-data-analysis--ud170" target="_blank">Pandas library</a> which I'd used before but never fully understood. 
                 </p>
                 <h5>Projects</h5>
                 <p>
-                    So far I've completed the project for the first section which was on using R to explore a data set of red wine ratings out of 10 and their chemical (see post in Projects section). It was a challenging project and really helped internalise a lot of what was thought in that section of the course. On a lot of courses I've done at the end I'm unsure if I'd be able to apply the learning independently but with this one I really feel like I understand what exploratory data analysis involves and can do at least a half decent job of it on any data set.
+                    The was a project at the end of each section. They're detailed better in the main Projects section of this site but in summary were <a href="redwine_eda/index.html" target="_blank">explorative data analysis</a> on a red wine data set, <a href="data_wrangling_weratedogs/jupyter_full.html" target="_blank">gathering and cleaning data</a> from the WeRateDogs twitter profile and <a href="https://public.tableau.com/profile/mark.macardle#!/vizhome/UKvChinaAirPollution_final/Story1" target="_blank">visualising the differences between UK and China's air pollution</a> in big cities.
                 </p>
                 <br>
                 <h5>Time Taken</h5>
-                <p>This is the biggest course I've done so far. The first section, including the project, took 69 hours to complete and the project was 17 hours of that. I'm now working on the second section.
+                <p>
+                    Not including some of the extra courses I did it took 106 hours in total. The first, second and third section took 45, 43.5, and 17.5 hours respectively. The projects took 17, 21.5 and 10.5 hours respectively. So the final section on data visualisation was much shorter than the other two.
                 </p>
                 
               </div>
