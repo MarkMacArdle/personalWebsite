@@ -23,7 +23,11 @@
       .navbar {
         background-color: #000000 !important;
       }
-      
+
+      #logoInitials {
+        color: #ffffff;
+      }
+
       #jtronContainer {
         padding-top:30px;
       }      
@@ -180,13 +184,13 @@
   </head>
   <body data-spy="scroll" data-target="#myNav">
     
-    <nav id="myNav" class="navbar fixed-top navbar-expand navbar-dark">
+    <nav id="myNav" class="navbar fixed-top navbar-expand-sm navbar-dark">
       <div class="container text-center">
-        <button id="smNavBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="smNavBtn" class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span id="logoInitials">MM</span>
         </button>
         <div  id="collapsingNavbar" class="collapse navbar-collapse">
-          <a class="navbar-brand hidden-xs-down" href="#jtron"><span id="logoFullName">Mark MacArdle</span></a>
+          <a class="navbar-brand d-none d-sm-block" href="#jtron"><span id="logoFullName">Mark MacArdle</span></a>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active text-center">
               <a class="nav-link" href="index.html#jtron">Home<span class="sr-only">(current)</span></a>
@@ -412,12 +416,13 @@
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseEight">
               <h5 class="mb-0">
                 <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseEight">
-                  This Website! (Bootstrap, JQuery)
+                  This Website (Bootstrap, JQuery)
                 </a>
               </h5>
             </div>
             <div id="projectsCollapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
               <div class="card-body">
+                <p><a href="https://github.com/MarkMacArdle/personalWebsite" target="_blank">Link to GitHub</a></p>
                 <p>I created this website using the alpha 6 release of Bootstrap 4 and a little bit of JQuery to do the self typing text in the heading.
                 </p>
               </div>
@@ -849,8 +854,12 @@
 
       
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Using full version of jquery instead of the slim build Bootstrap 
+      recommend as the fadein() animation function used for the jtron subheading
+      is only in the full version -->
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap also needs these two -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     
