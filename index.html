@@ -292,6 +292,33 @@
         <div id="projectsAccordion" role="tablist" aria-multiselectable="true">
           
           <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapse14">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="true" aria-controls="projectsCollapse14">
+                  Loss Aversion in Penalty Shoot-Outs (Python, Pandas, Beautiful Soup)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapse14" class="collapse show" role="tabpanel" aria-labelledby="heading14">
+              <div class="card-body">
+                <p class="text-center">
+                    <img src="penalties.png">
+                </p>
+                <br>
+                <p><a href="https://github.com/MarkMacArdle/World_Cup_Penalty_Shootouts" target="_blank">Link to Github</a></p>
+                <p><a href="https://medium.com/@macardle/investigating-loss-aversion-in-world-cup-penalty-shoot-outs-8bd2ba48ce86" target="_blank">Link to blog post</a></p>
+                <p>
+                    I wanted to see if loss aversion is playing an effect in world cup penalties shoot-outs. I explain what loss aversion is fully and what I did to test if it was present in a the blog post linked above. The short summary is that I was testing to see if the outcome of a kick was influenced by the preceding kick. There was a measured difference but it wasn’t significant.
+                </p>
+                <p>
+                    I using the Python libraries Beautiful Soup and Pandas to scrape the data from Wikipedia and then wrangled it. For the hypothesis test I used a Chi-Squared test as this was categorical data.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseThirteen">
               <h5 class="mb-0">
                 <a class="collapsed" aria-expanded="true" aria-controls="projectsCollapseThirteen">
@@ -299,7 +326,7 @@
                 </a>
               </h5>
             </div>
-            <div id="projectsCollapseThirteen" class="collapse show" role="tabpanel" aria-labelledby="headingThirteen">
+            <div id="projectsCollapseThirteen" class="collapse" role="tabpanel" aria-labelledby="headingThirteen">
               <div class="card-body">
                 <p class="text-center">
                     <a href="https://public.tableau.com/profile/mark.macardle#!/vizhome/UKvChinaAirPollution_final/Story1" target="_blank">
