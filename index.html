@@ -3,7 +3,7 @@
   <head>
     <title>Mark MacArdle</title>
     <link rel="icon" href="browserTabIcon1.png">
-    <meta name="description" content="I'm learning to about data science and programming! Follow me exploring python, machine learning and web development.">
+    <meta name="description" content="Follow me exploring python, data science and web development.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -220,7 +220,7 @@
       <div id="jtron" class="jumbotron jumbotron-fluid text-center">
         <div id="jtronText">
           <h1 id="jtronHeadline" class="display-3"></h1> <!-- text added by javascript -->
-          <p id="jtronP" class="lead align-middle">Follow me exploring python, machine learning and web development</p>
+          <p id="jtronP" class="lead align-middle">Follow me exploring data science and python programming</p>
         </div>
       </div>
     </div>
@@ -286,7 +286,7 @@
         <h1 class="sectionHeading text-center">Projects</h1>
         
         <p class="text-center sectionCardPara">
-          Below, with the most recent first, is a list of some of the projects I've created so far. They range from the very first thing I wrote, a version of Minesweeper in Excel, to more advanced projects like my two player Snake game.
+          Some of the more interesting projects I've created so far with the most recent first. They start from the very first thing I wrote, a version of Minesweeper in Excel, to more advanced projects like my two player Snake game.
         </p>
         
         <div id="projectsAccordion" role="tablist" aria-multiselectable="true">
@@ -308,7 +308,7 @@
                 <p><a href="https://github.com/MarkMacArdle/World_Cup_Penalty_Shootouts" target="_blank">Link to Github</a></p>
                 <p><a href="https://medium.com/@macardle/investigating-loss-aversion-in-world-cup-penalty-shoot-outs-8bd2ba48ce86" target="_blank">Link to blog post</a></p>
                 <p>
-                    I wanted to see if loss aversion is playing an effect in world cup penalties shoot-outs. I explain what loss aversion is fully and what I did to test if it was present in a the blog post linked above. The short summary is that I was testing to see if the outcome of a kick was influenced by the preceding kick. There was a measured difference but it wasn’t significant.
+                    I wanted to see if loss aversion is playing an effect in world cup penalties shoot-outs. I explain what loss aversion is fully and what I did to test if it was present in the blog post linked above. The short summary is that I was testing to see if the outcome of a kick was influenced by the preceding kick. There was a measured difference but it wasn’t significant.
                 </p>
                 <p>
                     I using the Python libraries Beautiful Soup and Pandas to scrape the data from Wikipedia and then wrangled it. For the hypothesis test I used a Chi-Squared test as this was categorical data.
@@ -347,34 +347,6 @@
 
 
           <div class="card accordian">
-            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseTwelve">
-              <h5 class="mb-0">
-                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseTwelve">
-                  Data Wrangling WeRateDogs Twitter (Python, Pandas)
-                </a>
-              </h5>
-            </div>
-            <div id="projectsCollapseTwelve" class="collapse" role="tabpanel" aria-labelledby="headingTwelve">
-              <div class="card-body">
-                <p>Link to summary of the <a href="data_wrangling_weratedogs/summary_report.html" target="_blank">data gathering, assessing and cleaning steps</a>, 
-                    <a href="data_wrangling_weratedogs/jupyter_analysis_only.html" target="_blank">brief analysis done at the end</a> and 
-                    <a href="data_wrangling_weratedogs/jupyter_full.html" target="_blank">the full jupyter notebook</a>
-                </p>
-                <p>
-                    The project was to gather, assess, clean and then briefly analyse data from the <a href="https://twitter.com/dog_rates/" target="_blank">WeRateDogs</a> twitter profile. They give cute dogs enthusiastic ratings (like 12/10 or 13/10) and are responsible for the <a href="http://knowyourmeme.com/memes/theyre-good-dogs-brent" target="_blank">"They're good dogs Brent"</a> meme. This was for the data wrangling section the Udacity Data Analyst Nanodegree I did. Some data about the tweets was given in csv files and some I had to pull using the twitter api and the tweepy library.
-                </p>
-                <p>
-                    I gained a lot of practical experience using the Pandas library and manipulating data frames. However, I think my favourite part was using regular expressions to pull the ratings from each tweet. I knew about them before but never really understood or used them, so this was great practice. I found <a href="https://regexone.com/" target="_blank">regexone.com</a> really helpful when learning more.
-                </p>
-                <p>
-                    There was a short analysis section at the end. This was largely to demonstrate that the cleaned data was useable so is quite brief as it wasn't the main focus of the project.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseEleven">
               <h5 class="mb-0">
                 <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseEleven">
@@ -404,26 +376,25 @@
               </div>
             </div>
           </div>
-
-
+          
+          
           <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseTen">
               <h5 class="mb-0">
                 <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseTen">
-                  Snake with High Score Database (SQL, Python)
+                  Snake with High Score Database (Python, Pygame, SQL)
                 </a>
               </h5>
             </div>
             <div id="projectsCollapseTen" class="collapse" role="tabpanel" aria-labelledby="headingTen">
               <div class="card-body">
                 <p><a href="https://github.com/markmacardle/Snake-1_and_2_player" target="_blank">Link to GitHub</a></p>
-                <p>Added database functionality to the snake game I previously made. I'm using PostgreSQL to store two tables of high scores for the one and two player versions of the game. Winners are asked to input their first and last names inside the game window and their scores recorded.</p>
-                
-                <p>SQL functions for setting up the tables, adding scores and retrieving scores in descending order are stored in Python functions and called as needed. A decorator is used to wrap these functions in another that opens the connection to the database, commits changes and closes the connection.
+                <p>A one and two player version of Snake. I made it to practice using classes and creating user interfaces in Python. I later added database functionality using PostgreSQL to store high score tables.
                 </p>
               </div>
             </div>
           </div>
+          
           
           <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseNine">
@@ -448,6 +419,7 @@
             </div>
           </div>
           
+          
           <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseEight">
               <h5 class="mb-0">
@@ -461,44 +433,6 @@
                 <p><a href="https://github.com/MarkMacArdle/personalWebsite" target="_blank">Link to GitHub</a></p>
                 <p>I created this website using the alpha 6 release of Bootstrap 4 and a little bit of JQuery to do the self typing text in the heading.
                 </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card accordian">
-            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseSeven">
-              <h5 class="mb-0">
-                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseSeven">
-                  Snake (Python, Pygame)
-                </a>
-              </h5>
-            </div>
-            <div id="projectsCollapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
-              <div class="card-body">
-                <p><a href="https://github.com/markmacardle/Snake-1_and_2_player" target="_blank">Link to GitHub</a></p> 
-                <p>A one and two player version of Snake. I made it to practice using classes in Python and used Pygame to create the user interface. I had a great time in testing. I had to get my housemates to help because, it's a little know fact that that it's way harder than you would think to play two player snake on your own! 
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          
-          <div class="card accordian">
-            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapseFour">
-              <h5 class="mb-0">
-                <a class="collapsed" aria-expanded="false" aria-controls="projectsCollapseFour">
-                  PitchHunter.co.uk (Bootstrap)
-                </a>
-              </h5>
-            </div>
-            <div id="projectsCollapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-              <div class="card-body">
-                <p><a href="pitchhunter/index.html" target="_blank">Link to page</a></p>  
-                <p>An app landing page I created for a now defunct project with a friend. We were going to create an app for booking five-a-side pitches and finding people to play with. We didn't get too far with it as it didn't look like it could meet it's costs. Got this landing page out of it though!
-                </p>
-                <p>It was the first time I used Bootstrap, framework developed by engineers from Twitter. It makes it easy to create websites that resize nicely on different screensizes, especially mobile devices.
-                </p>
-                
               </div>
             </div>
           </div>
