@@ -286,11 +286,40 @@
         <h1 class="sectionHeading text-center">Projects</h1>
         
         <p class="text-center sectionCardPara">
-          Some of the more interesting projects I've created so far with the most recent first. They start from the very first thing I wrote, a version of Minesweeper in Excel, to more advanced projects like my two player Snake game.
+          Some of the more interesting projects I've created so far with the more recent first. They start from the very first thing I wrote, a version of Minesweeper in Excel, to more advanced projects like my two player Snake game.
         </p>
         
         <div id="projectsAccordion" role="tablist" aria-multiselectable="true">
           
+          <div class="card accordian">
+            <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapse16">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="true" aria-controls="projectsCollapse16">
+                  Stock Market Gamification (Docker, MongoDB, Flask)
+                </a>
+              </h5>
+            </div>
+            <div id="projectsCollapse16" class="collapse show" role="tabpanel" aria-labelledby="heading16">
+              <div class="card-body">
+                <p class="text-center">
+                    <a href="http://ec2co-ecsel-5zub5659xyt4-1820632623.us-east-1.elb.amazonaws.com:5000/" target="_blank">
+                        <img src="stock_jumper_game_screenshot.png">
+                    </a>
+                </p>
+                <br>
+                <p><a href="https://github.com/MarkMacArdle/stock_game" target="_blank">Link to Github</a></p>
+                <p><a href="https://medium.com/@macardle/harvards-cs50-intro-to-computer-science-2019-review-10d89177a8a2" target="_blank">Link to blog post</a></p>
+                <p>
+                    Made for the final project of the CS50 course. Real stock market data is used to move the logos of companies on the Nasdaq 100 up and down on screen. You play a little spaceman who has to try jump up these stocks for points and sit on rising stocks to make profits.
+                </p>
+                <p>
+                    The front end of this game was made with the Phaser 3 Javascript library. It interacts with a Python Flask server which pulls data on stock market movements from IEX's api. Highscores are stored in a MongoDB. I put the game in a Docker container and then put that online using AWS ECS.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
           <div class="card accordian">
             <div class="card-header card-headerProjects" role="tab" data-toggle="collapse" data-parent="#projectsAccordion" href="#projectsCollapse15">
               <h5 class="mb-0">
@@ -299,7 +328,7 @@
                 </a>
               </h5>
             </div>
-            <div id="projectsCollapse15" class="collapse show" role="tabpanel" aria-labelledby="heading15">
+            <div id="projectsCollapse15" class="collapse" role="tabpanel" aria-labelledby="heading15">
               <div class="card-body">
                 <p class="text-center">
                     <a href="https://medium.com/@macardle/does-country-music-drink-more-than-other-genres-a21db901940b" target="_blank">
@@ -507,10 +536,62 @@
         <h1 class="sectionHeading text-center">Courses</h1>
         
         <p class="text-center sectionCardPara">
-          Below, again with the most recent first, is a list of the courses I've done so far in my own time and my experience with them. I take a lot of notes so I’ve included links to these in case they may be of use to your learning too. Be warned though that I wrote them for myself and wasn’t thinking of others using them at the time!
+          Below, again with the most recent first, is a list of the courses I've done so far and my experience with them. I take a lot of notes so I’ve included links to these in case they may be of use to your learning too. Be warned though that I wrote them for myself and wasn’t thinking of others using them at the time!
         </p>
         
         <div id="coursesAccordion" role="tablist" aria-multiselectable="true">
+
+
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseNine">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseNine">
+                  Harvard's CS50 Introduction to Computer Science
+                </a>
+              </h5>
+            </div>
+
+            <div id="collapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine">
+              <div class="card-body">
+                <p><a href="https://online-learning.harvard.edu/course/cs50-introduction-computer-science" target="_blank">Course link</a></p>                
+                <p><a href="https://medium.com/@macardle/harvards-cs50-intro-to-computer-science-2019-review-10d89177a8a2" target="_blank">Blog post discussing course in more detail</a></p>
+                <p>
+                    Harvard have made their intro to computer science available online for free, complete with all the lectures, graded assignments, notes and explainer videos. It was a really great course and helped deepen my understanding of data structures and how computers deal with the code I write. It started in C and worked up to running Flask servers and pulling data from APIs.
+                </p>
+                <p>
+                    It took me 133 hours over 19 weeks to complete. My final project was on stock market gamification and is described more in the blog post and the Projects section above. It's <a href="http://ec2co-ecsel-5zub5659xyt4-1820632623.us-east-1.elb.amazonaws.com:5000/" target="_blank">playable here</a> though if you want to give it a go. 
+                </p>                
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="card accordian">
+            <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseEight">
+              <h5 class="mb-0">
+                <a class="collapsed" aria-expanded="false" aria-controls="collapseEight">
+                  Google's Machine Learning Coursera Specialisation
+                </a>
+              </h5>
+            </div>
+
+            <div id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
+              <div class="card-body">
+                <p><a href="https://www.coursera.org/specializations/machine-learning-tensorflow-gcp" target="_blank">Course link</a></p>                
+                <p><a href="https://medium.com/@macardle/googles-machine-learning-coursera-specialisation-review-b979cc5f6bc8" target="_blank">Blog post with a more in depth review</a>
+                </p>
+                <p>
+                    There were 5 courses in this specialisation and they started out great. The first course, "How Google Does Machine Learning", was really insightful about how you build up to machine learning and apply it to imporve a process. 
+                </p>
+                <p>
+                    However by the 3rd of the 5 courses I'd become quite dissapointed with it and it's one of the few courses I stopped early. The issue with it was the labs. They mainly consited of giving you a working notebook of code and asking you to make small changes to it. I felt I wouldn't learn without assignments that pushed you a bit so stopped.
+              </div>
+            </div>
+          </div>
+
+
+
 
           <div class="card accordian">
             <div class="card-header card-headerCourses" role="tab" data-toggle="collapse" data-parent="#coursesAccordion" href="#collapseSeven">
@@ -798,7 +879,7 @@
         <h1 class="sectionHeading text-center">About Me</h1>
         
         <p class="text-center sectionCardPara">
-          My first roles were as a manufacturing engineer and in these I started programming by creating macros in Excel. I became passionate about this part of my work and since 2016 have done courses and projects in Python, web development and machine learning. I‘ve created this website to show off some of this work and discuss the courses I’ve taken. For more info on me or a contact, please use my LinkedIn below.
+          My first roles were as a manufacturing engineer and in these I started programming by creating macros in Excel. I became passionate about this part of my work and since 2016 have done courses and projects in Python, web development and data science. I‘ve created this website to show off some of this work and discuss the courses I’ve taken. For more info on me or a contact, please use my LinkedIn below.
         </p>
         
         <!--linkedin badge (also uses a javascript link at end of this doc-->
